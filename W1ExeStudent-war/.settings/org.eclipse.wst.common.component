@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="W1ExeStudent-war">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="W1ExeStudent-war"/>
+        <property name="java-output-path" value="/W1ExeStudent-war/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1- transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Monthly Payment Calculator</title>
+</h:head>
+<h:body>
+	<h:form>
+		<table>
+			<tr>
+				<td>Principle:</td>
+				<td><h:inputText id="principle"
+						value="#{loanManagedBean.loan.principle}">
+						<f:convertNumber pattern="#0.##" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Interest Rate:</td>
+				<td><h:inputText id="interestRate"
+						value="#{loanManagedBean.loan.interestRate}">
+						<f:convertNumber pattern="#0.#######" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Number of Years:</td>
+				<td><h:inputText id="numberOfYears"
+						value="#{loanManagedBean.loan.numberOfYears}" /></td>
+			</tr>
+			<tr>
+				<td>Monthly Payment:</td>
+				<td><h:outputLabel id="monthlyPayment"
+						value="#{loanManagedBean.loan.monthlyPayment}">
+						<f:convertNumber currencyCode="AUD" type="currency" />
+					</h:outputLabel></td>
+			</tr>
+		</table>
+		<h:commandButton type="submit" id="calculate" value="Calculate"
+			action="#{loanManagedBean.calculate()}" />
+	</h:form>
+</h:body>
+</html>
