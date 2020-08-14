@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"      
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+        <title>#{titleController.pageTitle}</title> 
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">
+                    #{titleController.pageTitle} - Property List
+                </div>
+            </div>
+
+            <h:form id="MyForm">
+                <table class="table table-bordered table-striped">
+                    <!-- For each property in properties ArrayList... --> 
+                    <tr>
+                            <td> 
+                                <h:outputLabel id="Id" value="Id"  />
+                            </td>
+                            <td> 
+                                <h:outputLabel id="Price" value="Price"  />
+                            </td>
+          
+                            <td> 
+                                <h:outputLabel id="Address" value="Address"/>
+                            </td>
+                            
+                     </tr>
+                    
+                    <ui:repeat id="Myrepeat" value="#{propertyApplication.properties}"  var="property" varStatus="status"> 
+                        
+                        <tr onclick="document.getElementById('MyForm:principle').value = document.getElementById('MyForm:Myrepeat:#{status.index}:outPrice').textContent"> 
+                            <td>
+                                <h:outputText value="#{propertyApplication.properties.get(status.index).propertyId}" id="propertyID" /> 
+                                
+                            </td>
+                            
+                            <td> 
+                                <h:outputText id="outPrice" value="#{propertyApplication.properties.get(status.index).price}"  />
+                            </td>
+                            <td>
+                                <h:outputText id="outAddress" value="#{propertyApplication.properties.get(status.index).address}"></h:outputText>
+                            </td>
+                            <td>
+                                <h:commandLink value="View | " action="detail.xhtml" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}">
+                                    <!-- pass the parameter to next page, the param name is propertyID, and the value is index + 1. 
+                                    You can get the value from next page using the indexController -->
+                                    <f:param name="propertyID" value="#{status.index + 1}"/>
+                                    
+                                </h:commandLink>
+                                <h:commandLink value="Edit | " action="edit.xhtml" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}">
+                                    <!-- pass the parameter to next page, the param name is propertyID, and the value is index + 1. 
+                                    You can get the value from next page using the indexController -->
+                                    <f:param name="propertyID"  value="#{status.index + 1}"></f:param> 
+                                </h:commandLink>
+                                
+                                <h:commandLink value="Delete" action="#{removeProperty.removeProperty(propertyApplication.properties.get(status.index).propertyId)}" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}">                                
+                                	<f:param name="propertyID" value="#{propertyController.propertyId+1}"/>
+                                	
+                                </h:commandLink>
+                                    
+                                <h:outputText value=" "/>
+                            </td>
+                            
+                        </tr> 
+
+                    </ui:repeat> 
+
+                </table>
+                
+                <div>
+                    <h:commandButton id="add" value="Add" action="add.xhtml" class="btn btn-primary" >
+                    </h:commandButton>
+                
+                    <h:commandButton id="viewAll" value="View All" action="#{searchProperty.searchAll()}" class="btn btn-primary" >
+                    </h:commandButton>
+                </div>
+                
+                
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

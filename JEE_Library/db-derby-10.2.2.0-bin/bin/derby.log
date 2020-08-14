@@ -1,0 +1,18 @@
+Apache Derby Network Server - 10.2.2.0 - (485682) started and ready to accept connections on port 1527 at 2020-07-11 03:24:46.921 GMT 
+----------------------------------------------------------------
+2020-07-11 03:51:44.568 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.2.2.0 - (485682): instance c013800d-0173-3be7-63b3-00000e8b3050
+on database directory C:\MonashUniTutorial\2020Semester2\FIT5042\Week04\JEE_Library\JEE_Library\db-derby-10.2.2.0-bin\bin\fit5042  
+
+Database Class Loader started - derby.database.classpath=''
+
+2020-07-11 10:48:02.460 GMT:
+Shutting down instance c013800d-0173-3be7-63b3-00000e8b3050
+----------------------------------------------------------------
+2020-07-11 10:48:02.472 GMT Thread[DRDAConnThread_4,5,main] (DATABASE = fit5042), (DRDAID = {2}), Database 'fit5042' shutdown.
+----------------------------------------------------------------
+2020-07-11 10:55:32.940 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.2.2.0 - (485682): instance c851401a-0173-3be7-63b3-00000e8b3050
+on database directory C:\MonashUniTutorial\2020Semester2\FIT5042\Week04\JEE_Library\JEE_Library\db-derby-10.2.2.0-bin\bin\fit5042  
+
+Database Class Loader started - derby.database.classpath=''
