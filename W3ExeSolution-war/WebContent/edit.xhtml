@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+        <title>#{titleController.pageTitle}</title>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">
+                    #{titleController.pageTitle} - Edit Property
+                </div>
+            </div>
+
+            <h:form id="MyForm">
+                <table class="table table-bordered ">
+
+                    <tr>
+                        <td width ="150" valign="top">Id:</td>
+
+                        <td valign="bottom">
+                            <h:outputLabel id = "Id" >#{propertyController.property.propertyId}</h:outputLabel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Street number: </td>
+                        <td valign="bottom">
+                            <h:inputText id = "streetNumber" value="#{propertyController.property.address.streetNumber}" binding="#{streetNumber}" required="true"
+                                         validatorMessage="Please enter a valid street number."
+                                         requiredMessage="Please enter an street number. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Street address: </td>
+                        <td valign="bottom">
+                            <h:inputText id = "streetAddress" value="#{propertyController.property.address.streetAddress}" binding="#{streetAddress}" required="true"
+                                         validatorMessage="Please enter a valid street address."
+                                         requiredMessage="Please enter an street address. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Suburb: </td>
+                        <td valign="bottom">
+                            <h:inputText id = "suburb" value="#{propertyController.property.address.suburb}" binding="#{suburb}" required="true"
+                                         validatorMessage="Please enter a valid suburb."
+                                         requiredMessage="Please enter a suburb. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">State: </td>
+                        <td valign="bottom">
+                            <h:inputText id = "state" value="#{propertyController.property.address.state}" binding="#{state}" required="true"
+                                         validatorMessage="Please enter a valid state."
+                                         requiredMessage="Please enter a state. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Postcode: </td>
+                        <td valign="bottom">
+                            <h:inputText id = "postcode" value="#{propertyController.property.address.postcode}" binding="#{postcode}" required="true"
+                                         validatorMessage="Please enter a valid postcode."
+                                         requiredMessage="Please enter a postcode. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">No of Bedrooms: </td>
+
+                        <td valign="bottom">
+                            <h:inputText id = "No-Bedrooms" value="#{propertyController.property.numberOfBedrooms}"  required="true"
+                                         validatorMessage="Number of rooms must be greater than 0"
+                                         requiredMessage="Please enter number of rooms. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Price: </td>
+
+                        <td valign="bottom">
+                            <h:inputText id = "Price" value="#{propertyController.property.price}"  required="true"
+                                         validatorMessage="Please enter a value greater than 0.0"
+                                         requiredMessage="Please enter a price. ">
+
+                                <f:convertNumber currencyCode="AUD" type="currency" />
+                            </h:inputText>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Size: </td>
+
+                        <td valign="bottom">
+                            <h:inputText id = "Size" value="#{propertyController.property.size}"  required="true"
+                                         validatorMessage="Please enter a value greater than 0.0"
+                                         requiredMessage="Please enter a size. "></h:inputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width ="100" valign="top">Contact Person: </td>
+                        <td>
+                            <h:selectOneMenu id="contact" value="#{propertyController.property.contactPerson}" converter="contactPerson">
+                                <f:selectItem itemValue="#{null}" itemLabel="--select--" />
+                                <f:selectItems value="#{propertyManagedBean.allContactPeople}" var="c"
+                                               itemLabel="#{c.name}" itemValue="#{c}" />
+                            </h:selectOneMenu>
+                        </td>
+                    </tr>
+                </table>
+
+                <h:commandButton id="save" value="Save" action="#{propertyManagedBean.editProperty(propertyController.property)}"  class="btn btn-primary" >
+                    <f:param name="propertyID" value="#{propertyController.propertyId+1}"/>
+                </h:commandButton>
+                <h:link id="close" value="Close" outcome="faces/index.xhtml"
+						          class="btn btn-primary" />
+            </h:form>
+        </div>
+    </h:body>
+</html>

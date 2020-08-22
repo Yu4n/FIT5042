@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<title>#{titleController.pageTitle}</title>
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-brand">#{titleController.pageTitle} - Add
+				Property</div>
+		</div>
+		<div>
+			<f:view>
+				<h:form>
+					<h1>
+						<h:outputText value="Create" />
+					</h1>
+					<table class="table table-bordered ">
+						<tr class="#{!streetNumber.valid ? 'has-error' : 'none'}">
+							<td width="200"><h:outputLabel value="streetNumber"
+									for="streetNumber" /></td>
+							<td><h:inputText id="streetNumber"
+									value="#{property.streetNumber}" title="streetNumber"
+									required="true"
+									requiredMessage="Please enter the street number!"
+									validatorMessage="Please enter a street number between 1 and 1000"
+									converterMessage="Please enter a number" pt:placeholder="900">
+									<f:convertNumber integerOnly="true" />
+									<f:validateLongRange minimum="1" maximum="1000" />
+								</h:inputText> <br /> <h:message for="streetNumber"
+									class="#{!streetNumber.valid ? 'label label-warning' : 'none'}" />
+							</td>
+						</tr>
+
+						<tr class="#{!streetAddress.valid ? 'has-error' : 'none'}">
+							<td><h:outputLabel value="streetAddress" for="streetAddress" />
+							</td>
+							<td><h:inputText id="streetAddress"
+									value="#{property.streetAddress}" title="streetAddress"
+									required="true"
+									requiredMessage="Please enter the street address!"
+									pt:placeholder="Dandenong Rd" /> <br /> <h:message
+									for="streetAddress"
+									class="#{!streetAddress.valid ? 'label label-warning' : 'none'}" />
+							</td>
+
+						</tr>
+
+						<tr class="#{!suburb.valid ? 'has-error' : 'none'}">
+							<td><h:outputLabel value="suburb" for="suburb" /></td>
+							<td><h:inputText id="suburb" value="#{property.suburb}"
+									title="suburb" required="true"
+									requiredMessage="Please enter the suburb!"
+									pt:placeholder="Caulfield East" /> <br /> <h:message
+									for="suburb"
+									class="#{!suburb.valid ? 'label label-warning' : 'none'}" /></td>
+
+						</tr>
+
+						<tr class="#{!state.valid ? 'has-error' : 'none'}">
+							<td><h:outputLabel value="state" for="state" /></td>
+							<td><h:inputText id="state" value="#{property.state}"
+									title="state" size="3" required="true"
+									requiredMessage="Please enter the state!" pt:placeholder="VIC" />
+								<br /> <h:message for="state"
+									class="#{!state.valid ? 'label label-warning' : 'none'}" /></td>
+
+						</tr>
+						<tr class="#{!postcode.valid ? 'has-error' : 'none'}">
+							<td><h:outputLabel value="postcode" for="postcode" /></td>
+							<td><h:inputText id="postcode" value="#{property.postcode}"
+									title="postcode" required="true"
+									requiredMessage="Please enter the postcode!"
+									validatorMessage="Please enter a postcode between 0200 and 4700"
+									converterMessage="Please enter a number" pt:placeholder="3145">
+									<f:convertNumber integerOnly="true" />
+									<f:validateLongRange minimum="200" maximum="4700" />
+								</h:inputText> <br /> <h:message for="postcode"
+									class="#{!postcode.valid ? 'label label-warning' : 'none'}" />
+							</td>
+
+						</tr>
+						<tr>
+							<td><h:outputLabel value="Size:" for="size" /></td>
+							<td><h:inputText id="size" value="#{property.size}"
+									title="Size" required="true"
+									requiredMessage="Please enter the size!"
+									validatorMessage="Size must be larger than 1"
+									converterMessage="Please enter a positive number"
+									pt:placeholder="530000.59">
+									<f:convertNumber minFractionDigits="2" />
+									<f:validateLongRange minimum="1" />
+								</h:inputText> <br /> <h:message for="size"
+									class="#{!size.valid ? 'label label-warning' : 'none'}" /></td>
+
+						</tr>
+
+						<tr>
+							<td><h:outputLabel value="NumberOfBedrooms:"
+									for="numberOfBedrooms" /></td>
+							<td><h:inputText id="numberOfBedrooms"
+									value="#{property.numberOfBedrooms}" title="NumberOfBedrooms"
+									required="true"
+									requiredMessage="Please enter the number of bedrooms!"
+									validatorMessage="The number of bedrooms must be larger than or equal to 0"
+									converterMessage="Please enter a number" pt:placeholder="4">
+									<f:convertNumber integerOnly="true" />
+									<f:validateLongRange minimum="0" />
+								</h:inputText> <br /> <h:message for="numberOfBedrooms"
+									class="#{!numberOfBedrooms.valid ? 'label label-warning' : 'none'}" />
+							</td>
+
+						</tr>
+
+						<tr>
+							<td><h:outputLabel value="Price:" for="price" /></td>
+							<td><h:inputText id="price" value="#{property.price}"
+									title="Price" required="true"
+									requiredMessage="Please enter the price!"
+									validatorMessage="The price must larger than $1"
+									converterMessage="Please enter a price"
+									pt:placeholder="$100000.00">
+									<f:convertNumber currencySymbol="$" type="currency" />
+									<f:validateLongRange minimum="1" />
+								</h:inputText> <br /> <h:message for="price"
+									class="#{!price.valid ? 'label label-warning' : 'none'}" /></td>
+
+						</tr>
+						<tr>
+							<td><h:outputLabel value="Contact Person:" for="contact" /></td>
+							<td><h:selectOneMenu id="contact"
+									value="#{property.contactPerson}" converter="contactPerson">
+									<f:selectItem itemValue="#{null}" itemLabel="--select--" />
+									<f:selectItems value="#{propertyManagedBean.allContactPeople}"
+										var="c" itemLabel="#{c.name}" itemValue="#{c}" />
+								</h:selectOneMenu></td>
+						</tr>
+
+					</table>
+
+					<h:commandButton id="submit" value="Submit"
+						action="#{addProperty.addProperty(property)}"
+						class="btn btn-primary" />
+					<h:link id="close" value="Close" outcome="faces/index.xhtml"
+						class="btn btn-primary" />
+
+				</h:form>
+
+			</f:view>
+		</div>
+	</div>
+
+</h:body>
+</html>
+
