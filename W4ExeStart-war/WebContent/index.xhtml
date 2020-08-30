@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+        <title>#{titleController.pageTitle}</title>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">
+                    #{titleController.pageTitle} - Property  List
+                </div>
+            </div>
+
+            <h:form id="MyForm">
+                <table class="table table-bordered table-striped">
+                    <!-- For each property in properties ArrayList... -->
+                    <tr>
+                            <td>
+                                <h:outputLabel id="Id" value="Id"  />
+                            </td>
+                            <td>
+                                <h:outputLabel id="Price" value="Price"  />
+                            </td>
+
+                            <td>
+                                <h:outputLabel id="Address" value="Address"/>
+                            </td>
+
+                     </tr>
+
+                    <ui:repeat id="Myrepeat" value="#{propertyApplication.properties}"  var="property" varStatus="status">
+
+                        <tr onclick="document.getElementById('MyForm:principle').value = document.getElementById('MyForm:Myrepeat:#{status.index}:outPrice').textContent">
+                            <td>
+                                <h:outputText value="#{propertyApplication.properties.get(status.index).propertyId}" id="propertyID" />
+
+                            </td>
+
+                            <td>
+                                <h:outputText id="outPrice" value="#{propertyApplication.properties.get(status.index).price}"  />
+                            </td>
+                            <td>
+                                <h:outputText id="outAddress" value="#{propertyApplication.properties.get(status.index).address}"></h:outputText>
+                            </td>
+                            <td>
+                              <h:link value="View | " outcome="faces/detail.xhtml">
+                              <!-- pass the parameter to next page, the param name is propertyID, and the value is index + 1.
+                                You can get the value from next page using the indexController -->
+                                <f:param name="propertyID" value="#{status.index + 1}"/>
+                              </h:link>
+
+                              <h:link value="Edit | " outcome="faces/edit.xhtml">
+                              <!-- pass the parameter to next page, the param name is propertyID, and the value is index + 1.
+                                You can get the value from next page using the indexController -->
+                                <f:param name="propertyID" value="#{status.index + 1}"/>
+                              </h:link>
+
+                                <h:commandLink value="Delete" action="#{removeProperty.removeProperty(propertyApplication.properties.get(status.index).propertyId)}" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}">
+                                </h:commandLink>
+
+                                <h:outputText value=" "/>
+                            </td>
+
+                        </tr>
+
+                    </ui:repeat>
+
+                </table>
+
+                <div>
+                    <h:commandButton id="add" value="Add" action="add.xhtml" class="btn btn-primary" />
+
+                    <h:commandButton id="viewAll" value="View All" action="#{searchProperty.searchAll()}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+                </div>
+                <div>
+                    <h:inputText value="#{searchProperty.searchByInt}" id="searchById" required="true" onchange ="if (document.getElementById('MyForm:searchById').value.trim() == '') {document.getElementById('MyForm:searchById').value = 0;} "   />
+                    <h:commandButton id="searchId" value="Search by Id" action="#{searchProperty.searchPropertyById(searchProperty.searchByInt)}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+                </div>
+                <div>
+                    <h:inputText value="#{searchProperty.searchByDouble}" id="searchByBudget" required="true" onchange="if (document.getElementById('MyForm:searchByBudget').value.trim() == '') {document.getElementById('MyForm:searchByBudget').value = 0.0;} " />
+                    <h:commandButton id="searchBudget" value="Search by Budget" action="#{searchProperty.searchPropertyByBudget(searchProperty.searchByDouble)}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+                </div>
+
+
+            </h:form>
+        </div>
+    </h:body>
+</html>

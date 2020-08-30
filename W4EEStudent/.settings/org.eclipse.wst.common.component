@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="W4EEStudent">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="W4ExeStart-common.jar" deploy-path="/lib" handle="module:/resource/W4ExeStart-common/W4ExeStart-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="W4ExeStart-ejb.jar" deploy-path="/" handle="module:/resource/W4ExeStart-ejb/W4ExeStart-ejb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="W4ExeStart-war.war" deploy-path="/" handle="module:/resource/W4ExeStart-war/W4ExeStart-war">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
