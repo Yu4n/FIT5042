@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Week 5 Webservice Tutorial</title>
+</h:head>
+<h:body>
+	<h1>Web Services Facelet Client</h1>
+	<f:view>
+		<h:form>
+			<p>
+				Your name:
+				<h:message for="name" />
+			</p>
+			<h:inputText id="name" label="Name" size="32"
+				value="#{webServiceBean.name}" required="true"
+				requiredMessage="You must enter a name!"></h:inputText>
+			<h:commandButton id="submit" value="Submit"
+				action="#{webServiceBean.setWebServiceClient}" />
+		</h:form>
+	</f:view>
+	<p>
+		View The <a href="webresources/greeting">Greeting </a>
+	</p>
+</h:body>
+</html>
