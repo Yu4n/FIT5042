@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba55bf1-a818-4dde-9bf1-0a84ad7522bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/W6ExeStudent.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/data/PokemonDataService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/model/pokemon.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/service/dataService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WeeklyReport/~$udio5Doc.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="aba55bf1-a818-4dde-9bf1-0a84ad7522bf" name="Default Changelist" comment="week 6" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,8 +63,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599792396833</updated>
-      <workItem from="1599792398952" duration="3245000" />
+      <workItem from="1599792398952" duration="3812000" />
     </task>
+    <task id="LOCAL-00001" summary="week 6">
+      <created>1599796618241</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599796618241</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +89,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="week 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="week 6" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="265" y="30" key="#Deployment" timestamp="1599796469008">
       <screen x="34" y="23" width="1406" height="877" />
@@ -99,9 +102,17 @@
       <screen x="34" y="23" width="1406" height="877" />
     </state>
     <state x="312" y="150" key="EditFileWatcherDialog/34.23.1406.877@34.23.1406.877" timestamp="1599794538402" />
+    <state x="265" y="105" key="Vcs.Push.Dialog.v2" timestamp="1599796653641">
+      <screen x="34" y="23" width="1406" height="877" />
+    </state>
+    <state x="265" y="105" key="Vcs.Push.Dialog.v2/34.23.1406.877@34.23.1406.877" timestamp="1599796653641" />
     <state x="603" y="151" width="604" height="735" key="find.popup" timestamp="1599793998949">
       <screen x="34" y="23" width="1406" height="877" />
     </state>
     <state x="603" y="151" width="604" height="735" key="find.popup/34.23.1406.877@34.23.1406.877" timestamp="1599793998949" />
+    <state x="459" y="261" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1599796637211">
+      <screen x="34" y="23" width="1406" height="877" />
+    </state>
+    <state x="459" y="261" key="git4idea.remote.GitConfigureRemotesDialog/34.23.1406.877@34.23.1406.877" timestamp="1599796637211" />
   </component>
 </project>
