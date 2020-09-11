@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-4"></div> <div class="col-md-4">
+  <table class ="table">
+    <tr *ngFor="let poke of pokemons;let i = index">
+      <td> {{poke.name}}
+      </td> <td>
+      <a [routerLink]="['/pokemon', i+1]">{{poke.url}}</a> </td>
+    </tr> </table>
+</div>
+  <div class="col-md-4"></div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <form [formGroup]='pokemonFormGroup' novalidate >
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <input class= "form-control" type="text" formControlName='name' placeholder="Enter Name"   />
+            <input class= "form-control" type="text" formControlName='power' placeholder="Enter Power"   />
+            <button class= 'btn btn-info' (click)="addPokemon()" >Add/Update</button>
+            <button class= 'btn btn-info' (click)="clearForm()">Clear</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row"></div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 col-md-offset-1 ">
+        <table class ="table">
+          <tr *ngFor="let poke of pokemons">
+            <td>
+              {{poke.id}}
+            </td>
+            <td>
+              {{poke.name}}
+            </td>
+            <td>
+              {{poke.power}}
+            </td>
+            <td>
+              <button class= 'btn btn-success' (click)="updatePokemon(poke.id)"> Edit</button>
+              <button class= 'btn btn-danger' (click)="deletePokemon(poke.id)"> Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </form>
+</div>
