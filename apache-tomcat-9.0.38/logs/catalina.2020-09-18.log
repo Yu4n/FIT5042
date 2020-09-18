@@ -1,0 +1,42 @@
+18-Sep-2020 10:49:42.564 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.38
+18-Sep-2020 10:49:42.574 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Sep 10 2020 08:20:30 UTC
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     9.0.38.0
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Mac OS X
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.15.6
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              x86_64
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/jre
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_201-b09
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38
+18-Sep-2020 10:49:42.575 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38
+18-Sep-2020 10:49:42.584 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/conf/logging.properties
+18-Sep-2020 10:49:42.584 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38
+18-Sep-2020 10:49:42.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/temp
+18-Sep-2020 10:49:42.588 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[/Users/zhangke/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+18-Sep-2020 10:49:43.308 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+18-Sep-2020 10:49:43.361 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[1162]毫秒内初始化
+18-Sep-2020 10:49:43.426 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+18-Sep-2020 10:49:43.427 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.38]
+18-Sep-2020 10:49:43.446 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/docs]
+18-Sep-2020 10:49:43.880 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/docs]的部署已在[431]毫秒内完成
+18-Sep-2020 10:49:43.881 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/manager]
+18-Sep-2020 10:49:43.940 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/manager]的部署已在[59]毫秒内完成
+18-Sep-2020 10:49:43.941 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/examples]
+18-Sep-2020 10:49:44.307 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/examples]的部署已在[367]毫秒内完成
+18-Sep-2020 10:49:44.307 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/ROOT]
+18-Sep-2020 10:49:44.321 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/ROOT]的部署已在[14]毫秒内完成
+18-Sep-2020 10:49:44.322 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/host-manager]
+18-Sep-2020 10:49:44.338 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/zhangke/MyCode/FIT5042/apache-tomcat-9.0.38/webapps/host-manager]的部署已在[16]毫秒内完成
+18-Sep-2020 10:49:44.343 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+18-Sep-2020 10:49:44.354 信息 [main] org.apache.catalina.startup.Catalina.start [992]毫秒后服务器启动
+18-Sep-2020 10:50:35.108 信息 [main] org.apache.catalina.core.StandardServer.await 通过关闭端口接收到有效的关闭命令。正在停止服务器实例。
+18-Sep-2020 10:50:35.109 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+18-Sep-2020 10:50:36.261 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+18-Sep-2020 10:50:36.308 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+18-Sep-2020 10:50:46.314 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]

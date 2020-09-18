@@ -63,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599792396833</updated>
-      <workItem from="1599792398952" duration="3812000" />
+      <workItem from="1599792398952" duration="4019000" />
     </task>
     <task id="LOCAL-00001" summary="week 6">
       <created>1599796618241</created>
@@ -72,7 +72,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599796618241</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="week 6">
+      <created>1599797113960</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599797113960</updated>
+    </task>
+    <task id="LOCAL-00003" summary="week 6">
+      <created>1599797233331</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599797233331</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,10 +116,10 @@
       <screen x="34" y="23" width="1406" height="877" />
     </state>
     <state x="312" y="150" key="EditFileWatcherDialog/34.23.1406.877@34.23.1406.877" timestamp="1599794538402" />
-    <state x="265" y="105" key="Vcs.Push.Dialog.v2" timestamp="1599796653641">
+    <state x="265" y="105" key="Vcs.Push.Dialog.v2" timestamp="1599797247781">
       <screen x="34" y="23" width="1406" height="877" />
     </state>
-    <state x="265" y="105" key="Vcs.Push.Dialog.v2/34.23.1406.877@34.23.1406.877" timestamp="1599796653641" />
+    <state x="265" y="105" key="Vcs.Push.Dialog.v2/34.23.1406.877@34.23.1406.877" timestamp="1599797247781" />
     <state x="603" y="151" width="604" height="735" key="find.popup" timestamp="1599793998949">
       <screen x="34" y="23" width="1406" height="877" />
     </state>
